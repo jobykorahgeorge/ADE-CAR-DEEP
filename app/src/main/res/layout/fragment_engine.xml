@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.EngineFragment">
+
+    <LinearLayout
+        android:id="@+id/engine_top_stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/engine_speed_layout"
+        android:background="@drawable/background_card"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <include
+            android:id="@+id/engine_rpm_layout"
+            layout="@layout/stat_new_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/engine_bottom_stats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/engine_top_stats"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <include
+                android:id="@+id/engine_rpm_overshoot_layout"
+                layout="@layout/stat_new1_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1" />
+
+
+            <include
+                android:id="@+id/engine_load_layout"
+                layout="@layout/stat_new1_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+               android:layout_marginStart="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1" />
+
+
+            <include
+                android:id="@+id/engine_temperature_layout"
+                layout="@layout/stat_new1_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/engine_speed_layout"
+        layout="@layout/stat_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_engine_chart"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+         />
+
+    <include
+        android:id="@+id/fuel_cost_layout"
+        layout="@layout/stat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/engine_top_stats"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1" />
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/relative_engine_chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/background_card">
+
+    <TextView
+        android:id="@+id/engine_chart_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acceleration"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+         />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/engine_chart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/engine_chart_title_text"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/darker_gray"
+        />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageView
+            android:id="@+id/stat_icon_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_dialog_alert"
+            android:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/stat_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/stat_icon_image"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="19dp"
+            android:lines="1"
+            android:text="Stat" />
+
+        <TextView
+            android:id="@+id/stat_value_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/stat_unit_text"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:lines="1"
+            android:text="00.0"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/stat_unit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:lines="1"
+            android:layout_centerVertical="true"
+            android:text="units"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+</RelativeLayout>

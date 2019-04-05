@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NearbyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/window_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/nearby_category_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/tab_background"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/nearby_category_service_center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nearby_category_service_center_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:lines="1"
+                    android:text="Service Centers"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/nearby_category_service_center_img"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_service_center"
+                    android:tint="@android:color/white" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:alpha="0.4"
+                android:background="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@+id/home_vehicle_layout" />
+
+            <LinearLayout
+                android:id="@+id/nearby_category_petrol"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nearby_category_petrol_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:lines="1"
+                    android:text="Petrol Pump"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/nearby_category_petrol_img"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_petrol_station"
+                    android:tint="@android:color/white" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:alpha="0.4"
+                android:background="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@+id/home_vehicle_layout" />
+
+            <LinearLayout
+                android:id="@+id/nearby_category_entertainment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nearby_category_entertainment_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:lines="1"
+                    android:text="Entertainment"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/nearby_category_entertainment_img"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_entertainment"
+                    android:tint="@android:color/white" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:alpha="0.4"
+                android:background="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@+id/home_vehicle_layout" />
+
+            <LinearLayout
+                android:id="@+id/nearby_category_restaurants"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nearby_category_restaurants_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:lines="1"
+                    android:text="Restaurants"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/nearby_category_restaurants_img"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_restaurants"
+                    android:tint="@android:color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/nearby_map"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@android:color/darker_gray" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/nearby_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>

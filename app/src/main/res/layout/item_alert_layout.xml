@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <LinearLayout
+        android:id="@+id/item_alert_date_layout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/alert_date_background"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_alert_dd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:textStyle="bold"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/item_alert_mmm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:textStyle="bold"
+            android:text="Apr"
+            android:textSize="16dp"
+            android:textColor="@android:color/primary_text_light" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_alert_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_centerVertical="true"
+        android:textSize="16dp"
+        android:layout_toEndOf="@+id/item_alert_date_layout"
+        android:text="Battery requires service. Please drive to nearest service center in Paradise, Nevada for tune-up." />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.4"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white" />
+</RelativeLayout>

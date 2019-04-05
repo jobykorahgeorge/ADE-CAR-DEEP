@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6ec7fd</color>
+    <color name="colorPrimaryDark">#3277a1</color>
+    <color name="colorAccent">#11415e</color>
+
+    <color name="goodRide">#33cc33</color>
+    <color name="badRide">#cc3333</color>
+    <color name="averageRide">#ffff33</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="blue_map">#417AF7</color>
+</resources>
