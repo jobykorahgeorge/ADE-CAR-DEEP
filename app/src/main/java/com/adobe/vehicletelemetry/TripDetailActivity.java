@@ -214,7 +214,7 @@ public class TripDetailActivity extends AppCompatActivity implements VolleyHandl
             mapLoadInterval = 2000;
 
             mVolleyHandler.makeRequestArray("wheel_data", this, VolleyHandler.GET,
-                    "https://api.mlab.com/api/1/databases/demo/collections/iot?apiKey=Yy5PdPkKAZbEEhGiQPYNpa5HoGbK5GbU&l=1&s={timestamp:-1}&region=USA", null);
+                    "https://api.mlab.com/api/1/databases/demo/collections/iot?apiKey=API_KEY=1&s={timestamp:-1}&region=USA", null);
         } else {
             loadMapView();
             fuelFragment.loadHistory();
